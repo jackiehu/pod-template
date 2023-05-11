@@ -4,18 +4,18 @@ module Pod
 
   class ProjectManipulator
     attr_reader :configurator, :xcodeproj_path, :platform, :string_replacements, :prefix
-
+#类执行方法
     def self.perform(options)
       new(options).perform
     end
-
+#对象初始化
     def initialize(options)
       @xcodeproj_path = options.fetch(:xcodeproj_path)
       @configurator = options.fetch(:configurator)
       @platform = options.fetch(:platform)
       @prefix = options.fetch(:prefix)
     end
-
+#运行
     def run
       @string_replacements = {
         "PROJECT_OWNER" => @configurator.user_name,
@@ -52,11 +52,11 @@ module Pod
       project_metadata_item.new_file "../LICENSE"
     end
 
-
+#工程目录
     def project_folder
       File.dirname @xcodeproj_path
     end
-
+#重命名所有的文件
     def rename_files
       # shared schemes have project specific names
       scheme_path = project_folder + "/PROJECT.xcodeproj/xcshareddata/xcschemes/"
@@ -77,13 +77,13 @@ module Pod
       
 
     end
-
+#工程目录重命名
     def rename_project_folder
       if Dir.exist? project_folder + "/PROJECT"
         File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name)
       end
     end
-
+#替换内部的工程配置
     def replace_internal_project_settings
       Dir.glob(project_folder + "/**/**/**/**").each do |name|
         next if Dir.exist? name

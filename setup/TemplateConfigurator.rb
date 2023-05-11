@@ -12,61 +12,7 @@ module Pod
       @prefixes = []
       @message_bank = MessageBank.new(self)
     end
-
-    def ask(question)
-      answer = ""
-      loop do
-        puts "\n#{question}?"
-
-        @message_bank.show_prompt
-        answer = gets.chomp
-
-        break if answer.length > 0
-
-        print "\nYou need to provide an answer."
-      end
-      answer
-    end
-
-    def ask_with_answers(question, possible_answers)
-
-      print "\n#{question}? ["
-
-      print_info = Proc.new {
-
-        possible_answers_string = possible_answers.each_with_index do |answer, i|
-           _answer = (i == 0) ? answer.underlined : answer
-           print " " + _answer
-           print(" /") if i != possible_answers.length-1
-        end
-        print " ]\n"
-      }
-      print_info.call
-
-      answer = ""
-
-      loop do
-        @message_bank.show_prompt
-        answer = gets.downcase.chomp
-
-        answer = "yes" if answer == "y"
-        answer = "no" if answer == "n"
-
-        # default to first answer
-        if answer == ""
-          answer = possible_answers[0].downcase
-          print answer.yellow
-        end
-
-        break if possible_answers.map { |a| a.downcase }.include? answer
-
-        print "\nPossible answers are ["
-        print_info.call
-      end
-
-      answer
-    end
-
+#运行主程序
     def run
 
       ConfigureSwift.perform(configurator: self)
@@ -76,7 +22,6 @@ module Pod
       rename_template_files
       add_pods_to_podfile
       rename_classes_folder
-      ensure_carthage_compatibility
       reinitialize_git_repo
       run_pod_install
 
@@ -85,10 +30,7 @@ module Pod
 
     #----------------------------------------#
 
-    def ensure_carthage_compatibility
-      FileUtils.ln_s('Example/Pods/Pods.xcodeproj', '_Pods.xcodeproj')
-    end
-
+#运行pod install
     def run_pod_install
       puts "\n正在为你的工程运行：" + "pod install".magenta + " ."
       puts ""
@@ -100,13 +42,13 @@ module Pod
       `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
       `git commit -m "Initial commit"`
     end
-
+#删除废弃文件
     def clean_template_files
       ["./**/.gitkeep", "configure", "_CONFIGURE.rb", "README.md", "LICENSE", "templates", "setup", "CODE_OF_CONDUCT.md"].each do |asset|
         `rm -rf #{asset}`
       end
     end
-
+# 替换文件中的变量内容
     def replace_variables_in_files
       file_names = ['POD_LICENSE', 'POD_README.md', 'NAME.podspec', '.travis.yml', podfile_path]
       file_names.each do |file_name|
@@ -143,17 +85,18 @@ module Pod
       FileUtils.mv "POD_LICENSE", "LICENSE"
       FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
     end
-
+#spec文件重命名
     def rename_classes_folder
       FileUtils.mv "Pod", @pod_name
+#     File.rename("NAME.podspec", @pod_name + ".podspec")
     end
-
+#重新Git初始化
     def reinitialize_git_repo
       `rm -rf .git`
       `git init`
       `git add -A`
     end
-
+#验证用户信息
     def validate_user_details
         return (user_email.length > 0) && (user_name.length > 0)
     end

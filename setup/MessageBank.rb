@@ -1,7 +1,7 @@
 module Pod
   class MessageBank
     attr_reader :configurator
-
+#初始化
     def initialize(config)
       @configurator = config
     end
@@ -21,14 +21,14 @@ module Pod
     def red_bang
       "! ".red
     end
-
+#运行终端命令
     def run_command command, output_command=nil
       output_command ||= command
 
       puts "  " + output_command.magenta
       system command
     end
-
+#打开Xcode工程
     def farewell_message
       puts ""
 
