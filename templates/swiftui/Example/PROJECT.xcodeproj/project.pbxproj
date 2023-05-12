@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		815DC61C2A0DEF5500DCE83D /* PROJECTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815DC61B2A0DEF5500DCE83D /* PROJECTApp.swift */; };
+		815DC61C2A0DEF5500DCE83D /* ContentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815DC61B2A0DEF5500DCE83D /* ContentApp.swift */; };
 		815DC61E2A0DEF5500DCE83D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815DC61D2A0DEF5500DCE83D /* ContentView.swift */; };
 		815DC6202A0DEF5600DCE83D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815DC61F2A0DEF5600DCE83D /* Assets.xcassets */; };
 		815DC6242A0DEF5600DCE83D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815DC6232A0DEF5600DCE83D /* Preview Assets.xcassets */; };
@@ -15,7 +15,7 @@
 
 /* Begin PBXFileReference section */
 		815DC6182A0DEF5500DCE83D /* PROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PROJECT.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		815DC61B2A0DEF5500DCE83D /* PROJECTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PROJECTApp.swift; sourceTree = "<group>"; };
+		815DC61B2A0DEF5500DCE83D /* ContentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentApp.swift; sourceTree = "<group>"; };
 		815DC61D2A0DEF5500DCE83D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		815DC61F2A0DEF5600DCE83D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		815DC6212A0DEF5600DCE83D /* PROJECT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PROJECT.entitlements; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		815DC61A2A0DEF5500DCE83D /* PROJECT */ = {
 			isa = PBXGroup;
 			children = (
-				815DC61B2A0DEF5500DCE83D /* PROJECTApp.swift */,
+				815DC61B2A0DEF5500DCE83D /* ContentApp.swift */,
 				815DC61D2A0DEF5500DCE83D /* ContentView.swift */,
 				815DC61F2A0DEF5600DCE83D /* Assets.xcassets */,
 				815DC6212A0DEF5600DCE83D /* PROJECT.entitlements */,
@@ -140,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				815DC61E2A0DEF5500DCE83D /* ContentView.swift in Sources */,
-				815DC61C2A0DEF5500DCE83D /* PROJECTApp.swift in Sources */,
+				815DC61C2A0DEF5500DCE83D /* ContentApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
