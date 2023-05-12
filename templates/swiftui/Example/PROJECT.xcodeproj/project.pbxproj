@@ -14,12 +14,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		815DC6182A0DEF5500DCE83D /* PROJECT_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PROJECT_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		815DC6182A0DEF5500DCE83D /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815DC61B2A0DEF5500DCE83D /* ContentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentApp.swift; sourceTree = "<group>"; };
 		815DC61D2A0DEF5500DCE83D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		815DC61F2A0DEF5600DCE83D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		815DC6212A0DEF5600DCE83D /* PROJECT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PROJECT.entitlements; sourceTree = "<group>"; };
 		815DC6232A0DEF5600DCE83D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		815DC6772A0E3DE100DCE83D /* Example-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Example-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +37,7 @@
 		815DC60F2A0DEF5500DCE83D = {
 			isa = PBXGroup;
 			children = (
+				815DC6772A0E3DE100DCE83D /* Example-Info.plist */,
 				815DC61A2A0DEF5500DCE83D /* PROJECT */,
 				815DC6192A0DEF5500DCE83D /* Products */,
 			);
@@ -44,7 +46,7 @@
 		815DC6192A0DEF5500DCE83D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				815DC6182A0DEF5500DCE83D /* PROJECT_Example.app */,
+				815DC6182A0DEF5500DCE83D /* Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,9 +74,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		815DC6172A0DEF5500DCE83D /* PROJECT_Example */ = {
+		815DC6172A0DEF5500DCE83D /* Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 815DC6272A0DEF5600DCE83D /* Build configuration list for PBXNativeTarget "PROJECT_Example" */;
+			buildConfigurationList = 815DC6272A0DEF5600DCE83D /* Build configuration list for PBXNativeTarget "Example" */;
 			buildPhases = (
 				815DC6142A0DEF5500DCE83D /* Sources */,
 				815DC6152A0DEF5500DCE83D /* Frameworks */,
@@ -84,9 +86,9 @@
 			);
 			dependencies = (
 			);
-			name = PROJECT_Example;
+			name = Example;
 			productName = PROJECT;
-			productReference = 815DC6182A0DEF5500DCE83D /* PROJECT_Example.app */;
+			productReference = 815DC6182A0DEF5500DCE83D /* Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -117,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				815DC6172A0DEF5500DCE83D /* PROJECT_Example */,
+				815DC6172A0DEF5500DCE83D /* Example */,
 			);
 		};
 /* End PBXProject section */
@@ -271,6 +273,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PROJECT/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Example-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -285,7 +288,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hu.app.PROJECT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -307,6 +310,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PROJECT/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Example-Info.plist";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -321,7 +325,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hu.app.PROJECT;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
@@ -344,7 +348,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		815DC6272A0DEF5600DCE83D /* Build configuration list for PBXNativeTarget "PROJECT_Example" */ = {
+		815DC6272A0DEF5600DCE83D /* Build configuration list for PBXNativeTarget "Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				815DC6282A0DEF5600DCE83D /* Debug */,
