@@ -1,6 +1,6 @@
 module Pod
 
-  class ConfigureSwift
+  class ConfigureSwiftUI
     attr_reader :configurator
 
     def self.perform(options)
