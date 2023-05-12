@@ -91,6 +91,7 @@ module Pod
       `git init`
       `git add -A`
     end
+    
 #验证用户信息
     def validate_user_details
         return (user_email.length > 0) && (user_name.length > 0)
