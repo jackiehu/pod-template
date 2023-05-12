@@ -28,10 +28,12 @@ module Pod
 
       @project = Xcodeproj::Project.open(@xcodeproj_path)
       show_demo_project
+      add_podspec_metadata
       @project.save
 
       rename_files
       rename_project_folder
+      rename_sources_folder
     end
     
     #打印demo工程
@@ -44,11 +46,18 @@ module Pod
       
     end
 
+def add_podspec_metadata
+  project_metadata_item = @project.root_object.main_group.children.select { |group| group.name == "Podspec Metadata" }.first
+  project_metadata_item.new_file "../" + @configurator.pod_name  + ".podspec"
+  project_metadata_item.new_file "../README.md"
+  project_metadata_item.new_file "../LICENSE"
+end
 
 #工程目录
     def project_folder
       File.dirname @xcodeproj_path
     end
+    
 #重命名所有的文件
     def rename_files
       # shared schemes have project specific names
@@ -76,6 +85,14 @@ module Pod
         File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name)
       end
     end
+    
+    #资源目录重命名
+        def rename_sources_folder
+          if Dir.exist? "Sources"
+            File.rename("Sources" + "/PROJECT", "Sources" + "/" + @configurator.pod_name)
+          end
+        end
+        
 #替换内部的工程配置
     def replace_internal_project_settings
       Dir.glob(project_folder + "/**/**/**/**").each do |name|
