@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		815DC6182A0DEF5500DCE83D /* PROJECT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PROJECT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		815DC6182A0DEF5500DCE83D /* PROJECT_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PROJECT_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815DC61B2A0DEF5500DCE83D /* ContentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentApp.swift; sourceTree = "<group>"; };
 		815DC61D2A0DEF5500DCE83D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		815DC61F2A0DEF5600DCE83D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		815DC6192A0DEF5500DCE83D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				815DC6182A0DEF5500DCE83D /* PROJECT.app */,
+				815DC6182A0DEF5500DCE83D /* PROJECT_Example.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,9 +72,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		815DC6172A0DEF5500DCE83D /* PROJECT */ = {
+		815DC6172A0DEF5500DCE83D /* PROJECT_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 815DC6272A0DEF5600DCE83D /* Build configuration list for PBXNativeTarget "PROJECT" */;
+			buildConfigurationList = 815DC6272A0DEF5600DCE83D /* Build configuration list for PBXNativeTarget "PROJECT_Example" */;
 			buildPhases = (
 				815DC6142A0DEF5500DCE83D /* Sources */,
 				815DC6152A0DEF5500DCE83D /* Frameworks */,
@@ -84,9 +84,9 @@
 			);
 			dependencies = (
 			);
-			name = PROJECT;
+			name = PROJECT_Example;
 			productName = PROJECT;
-			productReference = 815DC6182A0DEF5500DCE83D /* PROJECT.app */;
+			productReference = 815DC6182A0DEF5500DCE83D /* PROJECT_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -117,7 +117,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				815DC6172A0DEF5500DCE83D /* PROJECT */,
+				815DC6172A0DEF5500DCE83D /* PROJECT_Example */,
 			);
 		};
 /* End PBXProject section */
@@ -344,7 +344,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		815DC6272A0DEF5600DCE83D /* Build configuration list for PBXNativeTarget "PROJECT" */ = {
+		815DC6272A0DEF5600DCE83D /* Build configuration list for PBXNativeTarget "PROJECT_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				815DC6282A0DEF5600DCE83D /* Debug */,
