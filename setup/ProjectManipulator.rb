@@ -40,7 +40,7 @@ module Pod
     
       # Print the all groups
       @project.root_object.main_group.children.select { |group| 
-        puts "------------ #{group.name} ------------".green
+        puts "------------正在创建工程模版------------".green
       }
       
     end
