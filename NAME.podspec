@@ -28,15 +28,22 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/${USER_NAME}/${POD_NAME}.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '14.0'
-
+  s.ios.deployment_target = "14.0" 
+  s.swift_versions     = ['5.5','5.4','5.3','5.2','5.1','5.0']
+  s.requires_arc = true
+  #s.frameworks   = "UIKit", "Foundation", "SwiftUI" #支持的框架
+  
   s.source_files = 'Sources/${POD_NAME}/**/*'
   
-  # s.resource_bundles = {
-  #   '${POD_NAME}' => ['${POD_NAME}/Assets/*.png']
-  # }
+  #文件路径
+  #s.subspec 'In' do |ss|
+  #  ss.source_files = 'Code/*.swift'
+  #end
+  
+  #资源包
+  #s.resource_bundles = {
+  #  '${POD_NAME}' => ['Sources/Resource/*']
+  #}
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
