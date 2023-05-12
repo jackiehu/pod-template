@@ -5,7 +5,9 @@ pod-template
 
 
 
-用法：
+用法：下载pod_lib_create文件双击即可
+
+或者命令行输入：
 
 ```
 pod lib create YourPodName --template-url="https://gitee.com/jackiehu1122/pod-template"
