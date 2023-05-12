@@ -87,7 +87,7 @@ module Pod
     end
 #spec文件重命名
     def rename_classes_folder
-      FileUtils.mv "Pod", @pod_name
+      FileUtils.mv "Sources", @pod_name
 #     File.rename("NAME.podspec", @pod_name + ".podspec")
     end
 #重新Git初始化
