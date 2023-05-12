@@ -1,0 +1,8 @@
+use_frameworks!
+
+platform :ios, '14.0'
+
+target '${POD_NAME}' do
+  pod '${POD_NAME}', :path => '../'
+
+end

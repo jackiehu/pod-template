@@ -12,10 +12,56 @@ module Pod
       @prefixes = []
       @message_bank = MessageBank.new(self)
     end
+    
+    def ask_with_answers(question, possible_answers)
+    
+          print "\n#{question}? ["
+          
+          print_info = Proc.new {
+            
+            possible_answers_string = possible_answers.each_with_index do |answer, i|
+                _answer = (i == 0) ? answer.underlined : answer
+                print " " + _answer
+                print(" /") if i != possible_answers.length-1
+            end
+            print " ]\n"
+          }
+          print_info.call
+          
+          answer = ""
+          
+          loop do
+            @message_bank.show_prompt
+            answer = gets.downcase.chomp
+            
+            answer = "yes" if answer == "y"
+            answer = "no" if answer == "n"
+            
+            # default to first answer
+            if answer == ""
+              answer = possible_answers[0].downcase
+              print answer.yellow
+            end
+            
+            break if possible_answers.map { |a| a.downcase }.include? answer
+            
+            print "\nPossible answers are ["
+            print_info.call
+          end
+          
+          answer
+    end
+        
 #运行主程序
     def run
-
-      ConfigureSwift.perform(configurator: self)
+      framework = self.ask_with_answers("请选择工程?", ["Swift", "SwiftUI"]).to_sym
+      case framework
+        when :swift
+          ConfigureSwift.perform(configurator: self)
+          
+        when :swiftui
+          ConfigureSwiftUI.perform(configurator: self)
+      end
 
       replace_variables_in_files
       clean_template_files
