@@ -143,7 +143,7 @@ module Pod
       FileUtils.mv "Sources", "../Sources"
       FileUtils.mv "swift_package_init", "../swift_package_init"
       FileUtils.mv ".travis.yml", "../.travis.yml"
-      FileUtils.rmdir "../#{pod_name}"
+      FileUtils.rm_r "../#{pod_name}"
     end
 
 ##重新Git初始化
