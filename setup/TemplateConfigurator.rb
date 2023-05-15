@@ -69,7 +69,7 @@ module Pod
       add_pods_to_podfile
       reinitialize_git_repo
       run_pod_install
-
+      move_template_files
       @message_bank.farewell_message
     end
 
@@ -95,7 +95,7 @@ module Pod
     end
 # 替换文件中的变量内容
     def replace_variables_in_files
-      file_names = ['POD_LICENSE', 'POD_README.md', 'NAME.podspec', 'travis.yml', podfile_path]
+      file_names = ['POD_LICENSE', 'POD_README.md', 'NAME.podspec', '.travis.yml', podfile_path]
       file_names.each do |file_name|
         text = File.read(file_name)
         text.gsub!("${POD_NAME}", @pod_name)
@@ -124,11 +124,26 @@ module Pod
     def add_line_to_pch line
       @prefixes << line
     end
-
+    #重命名部分文件 
     def rename_template_files
       FileUtils.mv "POD_README.md", "README.md"
       FileUtils.mv "POD_LICENSE", "LICENSE"
       FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
+    end
+    #迁移文件 
+    def move_template_files
+      FileUtils.mv "README.md", "../README.md"
+      FileUtils.mv "LICENSE", "../LICENSE"
+      FileUtils.mv "#{pod_name}.podspec", "../#{pod_name}.podspec"
+      
+      FileUtils.mv "Example", "../Example"
+      FileUtils.mv "fastlane", "../fastlane"
+      FileUtils.mv "fastlane_pod", "../fastlane_pod"
+      FileUtils.mv "pod_lib_create", "../pod_lib_create"
+      FileUtils.mv "Sources", "../Sources"
+      FileUtils.mv "swift_package_init", "../swift_package_init"
+      FileUtils.mv ".travis.yml", "../.travis.yml"
+#     FileUtils.rmdir "#{pod_name}"
     end
 
 #重新Git初始化
@@ -137,6 +152,7 @@ module Pod
       `git init`
       `git add -A`
     end
+    
     
 #验证用户信息
     def validate_user_details
