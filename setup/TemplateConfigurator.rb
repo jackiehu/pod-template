@@ -67,7 +67,7 @@ module Pod
       clean_template_files
       rename_template_files
       add_pods_to_podfile
-      reinitialize_git_repo
+#     reinitialize_git_repo
       run_pod_install
       move_template_files
       @message_bank.farewell_message
@@ -143,15 +143,15 @@ module Pod
       FileUtils.mv "Sources", "../Sources"
       FileUtils.mv "swift_package_init", "../swift_package_init"
       FileUtils.mv ".travis.yml", "../.travis.yml"
-#     FileUtils.rmdir "#{pod_name}"
+      FileUtils.rmdir "../#{pod_name}"
     end
 
-#重新Git初始化
-    def reinitialize_git_repo
-      `rm -rf .git`
-      `git init`
-      `git add -A`
-    end
+##重新Git初始化
+#   def reinitialize_git_repo
+#     `rm -rf .git`
+#     `git init`
+#     `git add -A`
+#   end
     
     
 #验证用户信息
