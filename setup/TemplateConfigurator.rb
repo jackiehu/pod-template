@@ -52,7 +52,7 @@ module Pod
           answer
     end
         
-#运行主程序
+    #运行主程序
     def run
       framework = self.ask_with_answers("请选择工程?", ["Swift", "SwiftUI"]).to_sym
       case framework
@@ -67,15 +67,15 @@ module Pod
       clean_template_files
       rename_template_files
       add_pods_to_podfile
-#     reinitialize_git_repo
       run_pod_install
       move_template_files
+      reinitialize_git_repo
       @message_bank.farewell_message
     end
 
     #----------------------------------------#
 
-#运行pod install
+    #运行pod install
     def run_pod_install
       puts "\n正在为你的工程运行：" + "pod install".magenta + " ."
       puts ""
@@ -87,13 +87,13 @@ module Pod
       `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
       `git commit -m "Initial commit"`
     end
-#删除废弃文件
+    #删除废弃文件
     def clean_template_files
       ["./**/.gitkeep", "configure", "_CONFIGURE.rb", "README.md", "LICENSE", "templates", "setup", "CODE_OF_CONDUCT.md"].each do |asset|
         `rm -rf #{asset}`
       end
     end
-# 替换文件中的变量内容
+    # 替换文件中的变量内容
     def replace_variables_in_files
       file_names = ['POD_LICENSE', 'POD_README.md', 'NAME.podspec', '.travis.yml', podfile_path]
       file_names.each do |file_name|
@@ -146,15 +146,15 @@ module Pod
       FileUtils.rm_r "../#{pod_name}"
     end
 
-##重新Git初始化
-#   def reinitialize_git_repo
-#     `rm -rf .git`
-#     `git init`
-#     `git add -A`
-#   end
+    #重新Git初始化
+    def reinitialize_git_repo
+    `rm -rf .git`
+    `git init`
+    `git add -A`
+    end
     
     
-#验证用户信息
+    #验证用户信息
     def validate_user_details
         return (user_email.length > 0) && (user_name.length > 0)
     end
