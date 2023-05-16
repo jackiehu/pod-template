@@ -142,7 +142,7 @@ module Pod
       FileUtils.mv "pod_lib_create", "../pod_lib_create"
       FileUtils.mv "Sources", "../Sources"
       FileUtils.mv "swift_package_init", "../swift_package_init"
-      FileUtils.mv ".travis.yml", "../.travis.yml"
+
       FileUtils.rm_r "../#{pod_name}"
     end
 
