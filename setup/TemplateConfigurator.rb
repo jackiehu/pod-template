@@ -126,6 +126,7 @@ module Pod
     end
     #重命名部分文件 
     def rename_template_files
+      FileUtils.mv "POD_README_ZH.md", "README_ZH.md"
       FileUtils.mv "POD_README.md", "README.md"
       FileUtils.mv "POD_LICENSE", "LICENSE"
       FileUtils.mv "NAME.podspec", "#{pod_name}.podspec"
@@ -133,6 +134,7 @@ module Pod
     #迁移文件 
     def move_template_files
       FileUtils.mv "README.md", "../README.md"
+      FileUtils.mv "README_ZH.md", "../README_ZH.md"
       FileUtils.mv "LICENSE", "../LICENSE"
       FileUtils.mv "#{pod_name}.podspec", "../#{pod_name}.podspec"
       

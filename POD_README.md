@@ -7,41 +7,41 @@
 ![Swift 5.0+](https://img.shields.io/badge/Swift-5.0%2B-orange.svg)
 ![SwiftUI 3.0+](https://img.shields.io/badge/SwiftUI-3.0%2B-orange.svg)
 
-## 例子
+## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## 要求
+## Usage
 
 
-## 安装
+## Install
 
-### cocoapods
+### Cocoapods
 
-1.在 Podfile 中添加 `pod '${POD_NAME}'`
+1. Add `pod '${POD_NAME}'` in Podfile
 
-2.执行 `pod install 或 pod update`
+2. Execute `pod install or pod update`
 
-3.导入 `import ${POD_NAME}`
+3. Import `import ${POD_NAME}`
 
 ### Swift Package Manager
 
-从 Xcode 11 开始，集成了 Swift Package Manager，使用起来非常方便。${POD_NAME} 也支持通过 Swift Package Manager 集成。
+Starting from Xcode 11, the Swift Package Manager is integrated, which is very convenient to use. ${POD_NAME} also supports integration via Swift Package Manager.
 
-在 Xcode 的菜单栏中选择 `File > Swift Packages > Add Pacakage Dependency`，然后在搜索栏输入
+Select `File > Swift Packages > Add Pacakage Dependency` in Xcode's menu bar, and enter in the search bar
 
-`https://github.com/jackiehu/${POD_NAME}`，即可完成集成
+`https://github.com/jackiehu/${POD_NAME}`, you can complete the integration
 
-### 手动集成
+### Manual Install
 
-${POD_NAME} 也支持手动集成，只需把Sources文件夹中的${POD_NAME}文件夹拖进需要集成的项目即可
+${POD_NAME} also supports manual Install, just drag the ${POD_NAME} folder in the Sources folder into the project that needs to be installed
 
 
-## 作者
+## Author
 
 ${USER_NAME}, ${USER_EMAIL}
 
-## 更多砖块工具加速APP开发
+## More tools to speed up APP development
 
 [![ReadMe Card](https://github-readme-stats.vercel.app/api/pin/?username=jackiehu&repo=SwiftMediator&theme=radical&locale=cn)](https://github.com/jackiehu/SwiftMediator)
 
