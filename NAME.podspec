@@ -42,8 +42,8 @@ TODO: Add long description of the pod here.
   
   #资源包
   #s.resource_bundles = {
-  #  '${POD_NAME}' => ['Sources/Resource/*']
+  #  '${POD_NAME}' => ['Sources/Resource/**/*']
   #}
 
-  # s.dependency 'AFNetworking', '~> 2.3'
+  # s.dependency 'SwiftBrick', '~> 2.4.0'
 end
