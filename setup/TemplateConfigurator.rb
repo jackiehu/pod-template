@@ -95,7 +95,7 @@ module Pod
     end
     # 替换文件中的变量内容
     def replace_variables_in_files
-      file_names = ['POD_LICENSE', 'POD_README.md', 'NAME.podspec', '.travis.yml', podfile_path]
+      file_names = ['POD_LICENSE', 'POD_README.md', 'POD_README_ZH.md', 'NAME.podspec', '.travis.yml', podfile_path]
       file_names.each do |file_name|
         text = File.read(file_name)
         text.gsub!("${POD_NAME}", @pod_name)
