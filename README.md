@@ -10,6 +10,6 @@ pod-template
 或者命令行输入：
 
 ```
-pod lib create YourPodName --template-url="https://gitee.com/jackiehu1122/pod-template"
+pod lib create YourPodName --template-url="https://gitee.com/zjinhu/pod-template"
 ```
 
