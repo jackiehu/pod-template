@@ -15,7 +15,7 @@ module Pod
 
       Pod::ProjectManipulator.new({
         :configurator => @configurator,
-        :xcodeproj_path => "templates/swift/Example/PROJECT.xcodeproj",
+        :xcodeproj_path => "templates/swift/Example/Example.xcodeproj",
         :platform => :ios,
         :prefix => ""
       }).run

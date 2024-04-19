@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  PROJECT
+//  Example
 //
-//  Created by iOS on 2023/5/11.
+//  Created by FunWidget on 2024/4/19.
 //
 
 import UIKit

@@ -1,8 +1,8 @@
 //
-//  PROJECTApp.swift
-//  PROJECT
+//  ExampleApp.swift
+//  Example
 //
-//  Created by iOS on 2023/5/12.
+//  Created by FunWidget on 2024/4/19.
 //
 
 import SwiftUI

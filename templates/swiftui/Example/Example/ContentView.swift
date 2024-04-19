@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  PROJECT
+//  Example
 //
-//  Created by iOS on 2023/5/12.
+//  Created by FunWidget on 2024/4/19.
 //
 
 import SwiftUI
@@ -12,15 +12,13 @@ struct ContentView: View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
-                .foregroundColor(.accentColor)
+                .foregroundStyle(.tint)
             Text("Hello, world!")
         }
         .padding()
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }

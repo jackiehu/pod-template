@@ -84,7 +84,7 @@ module Pod
         system "pod install"
       end
 
-      `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
+      `git add Example/Example.xcodeproj/project.pbxproj`
       `git commit -m "Initial commit"`
     end
     #删除废弃文件
