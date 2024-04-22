@@ -68,13 +68,14 @@ module Pod
       rename_template_files
       add_pods_to_podfile
       
-      pod = self.ask_with_answers("是否执行pod?", ["Y", "N"]).to_sym
-      case framework
-        when :y
+      pod = self.ask_with_answers("是否执行pod?", ["Yes", "No"]).to_sym
+      case pod
+        when :yes
             run_pod_install
-        when :n
+        when :nn
             run_project
       end
+      
       git_add
       move_template_files
       reinitialize_git_repo
