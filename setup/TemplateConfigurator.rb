@@ -67,26 +67,38 @@ module Pod
       clean_template_files
       rename_template_files
       add_pods_to_podfile
-      run_pod_install
+      
+      pod = self.ask_with_answers("是否执行pod?", ["Y", "N"]).to_sym
+      case framework
+        when :y
+            run_pod_install
+        when :n
+            run_project
+      end
+      git_add
       move_template_files
       reinitialize_git_repo
       @message_bank.farewell_message
     end
 
     #----------------------------------------#
-
+    def run_project
+        puts "\n正在创建工程......."
+    end
     #运行pod install
     def run_pod_install
-        puts "\n正在创建工程......."
-        
-#      puts "\n正在为你的工程运行：" + "pod install".magenta + " ."
-#      Dir.chdir("Example") do
-#        system "pod install"
-#      end
-
+      puts "\n正在为你的工程运行：" + "pod install".magenta + " ."
+      Dir.chdir("Example") do
+        system "pod install"
+      end
+    end
+    
+    def git_add
+        puts "\n正在添加git......."
       `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
       `git commit -m "Initial commit"`
     end
+    
     #删除废弃文件
     def clean_template_files
       ["./**/.gitkeep", "configure", "_CONFIGURE.rb", "README.md", "LICENSE", "templates", "setup", "CODE_OF_CONDUCT.md"].each do |asset|
