@@ -34,7 +34,7 @@ module Pod
 
       puts " 已创建好工程 "
       pod_name = @configurator.pod_name
-      run_command "open 'Example/#{pod_name}Demo.xcworkspace'", "open '#{pod_name}/Example/#{pod_name}Demo.xcworkspace'"
+      run_command "open 'Example/#{pod_name}.xcworkspace'", "open '#{pod_name}/Example/#{pod_name}.xcworkspace'"
     end
 
 

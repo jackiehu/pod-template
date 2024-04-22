@@ -96,7 +96,7 @@ module Pod
     
     def git_add
         puts "\n正在添加git......."
-      `git add Example/#{pod_name}Demo.xcodeproj/project.pbxproj`
+      `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
       `git commit -m "Initial commit"`
     end
     
