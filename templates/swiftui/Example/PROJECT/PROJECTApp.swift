@@ -1,14 +1,14 @@
 //
-//  ExampleApp.swift
-//  Example
+//  PROJECTApp.swift
+//  PROJECT
 //
-//  Created by FunWidget on 2024/4/19.
+//  Created by FunWidget on 2024/4/22.
 //
 
 import SwiftUI
 
 @main
-struct ExampleApp: App {
+struct PROJECTApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
