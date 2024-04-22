@@ -39,7 +39,7 @@ module Pod
     def show_demo_project
     
       # Print the all groups
-      @project.root_object.main_group.children.select { |group| 
+      @project.root_object.main_group.children.select { |group|
         puts "------------正在创建工程模版------------".green
       }
       
@@ -63,6 +63,20 @@ module Pod
         # rename project related files
         ["PROJECT.entitlements"].each do |file|
           before = project_folder + "/PROJECT/" + file
+          next unless File.exist? before
+
+          after = project_folder + "/PROJECT/" + file.gsub("PROJECT", @configurator.pod_name)
+          File.rename before, after
+        end
+      
+
+    end
+#工程目录重命名
+    def rename_project_folder
+      if Dir.exist? project_folder + "/PROJECT"
+        File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name)
+      end
+    end
     
     #资源目录重命名
         def rename_sources_folder
