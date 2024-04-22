@@ -65,7 +65,7 @@ module Pod
           before = project_folder + "/PROJECT/" + file
           next unless File.exist? before
 
-          after = project_folder + "/PROJECT/" + file.gsub("PROJECT", @configurator.pod_name)
+          after = project_folder + "/PROJECT/" + file.gsub("PROJECT", @configurator.pod_name + "Demo")
           File.rename before, after
         end
       
@@ -74,7 +74,7 @@ module Pod
 #工程目录重命名
     def rename_project_folder
       if Dir.exist? project_folder + "/PROJECT"
-        File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name)
+        File.rename(project_folder + "/PROJECT", project_folder + "/" + @configurator.pod_name + "Demo")
       end
     end
     
