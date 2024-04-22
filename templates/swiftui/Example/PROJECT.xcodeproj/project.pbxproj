@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8CB00E782BD61E4900E82C71 /* PROJECTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB00E772BD61E4900E82C71 /* PROJECTApp.swift */; };
+		8CB00E782BD61E4900E82C71 /* ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB00E772BD61E4900E82C71 /* ExampleApp.swift */; };
 		8CB00E7A2BD61E4900E82C71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB00E792BD61E4900E82C71 /* ContentView.swift */; };
 		8CB00E7C2BD61E4A00E82C71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB00E7B2BD61E4A00E82C71 /* Assets.xcassets */; };
 		8CB00E802BD61E4A00E82C71 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB00E7F2BD61E4A00E82C71 /* Preview Assets.xcassets */; };
@@ -15,7 +15,7 @@
 
 /* Begin PBXFileReference section */
 		8CB00E742BD61E4900E82C71 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CB00E772BD61E4900E82C71 /* PROJECTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PROJECTApp.swift; sourceTree = "<group>"; };
+		8CB00E772BD61E4900E82C71 /* ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleApp.swift; sourceTree = "<group>"; };
 		8CB00E792BD61E4900E82C71 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8CB00E7B2BD61E4A00E82C71 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CB00E7D2BD61E4A00E82C71 /* PROJECT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PROJECT.entitlements; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		8CB00E762BD61E4900E82C71 /* PROJECT */ = {
 			isa = PBXGroup;
 			children = (
-				8CB00E772BD61E4900E82C71 /* PROJECTApp.swift */,
+				8CB00E772BD61E4900E82C71 /* ExampleApp.swift */,
 				8CB00E792BD61E4900E82C71 /* ContentView.swift */,
 				8CB00E7B2BD61E4A00E82C71 /* Assets.xcassets */,
 				8CB00E7D2BD61E4A00E82C71 /* PROJECT.entitlements */,
@@ -140,7 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CB00E7A2BD61E4900E82C71 /* ContentView.swift in Sources */,
-				8CB00E782BD61E4900E82C71 /* PROJECTApp.swift in Sources */,
+				8CB00E782BD61E4900E82C71 /* ExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

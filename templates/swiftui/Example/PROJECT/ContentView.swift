@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  PROJECT
+//  Example
 //
 //  Created by FunWidget on 2024/4/22.
 //
