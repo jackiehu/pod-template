@@ -77,12 +77,12 @@ module Pod
 
     #运行pod install
     def run_pod_install
-      puts "\n正在为你的工程运行：" + "pod install".magenta + " ."
-      puts ""
-
-      Dir.chdir("Example") do
-        system "pod install"
-      end
+        puts "\n正在创建工程......."
+        
+#      puts "\n正在为你的工程运行：" + "pod install".magenta + " ."
+#      Dir.chdir("Example") do
+#        system "pod install"
+#      end
 
       `git add Example/#{pod_name}.xcodeproj/project.pbxproj`
       `git commit -m "Initial commit"`
