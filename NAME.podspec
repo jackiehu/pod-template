@@ -29,7 +29,8 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = "14.0" 
-  s.swift_versions     = ['5.5','5.4','5.3','5.2','5.1','5.0']
+  s.swift_version = "5.0"
+  #s.swift_versions = ['5.5','5.4','5.3','5.2','5.1','5.0']
   s.requires_arc = true
   #s.frameworks   = "UIKit", "Foundation", "SwiftUI" #支持的框架
   
