@@ -30,7 +30,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 在 Xcode 的菜单栏中选择 `File > Swift Packages > Add Pacakage Dependency`，然后在搜索栏输入
 
-`https://github.com/jackiehu/${POD_NAME}`，即可完成集成
+`https://github.com/zjinhu/${POD_NAME}`，即可完成集成
 
 ### 手动集成
 

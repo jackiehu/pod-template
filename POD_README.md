@@ -7,7 +7,7 @@
 ![Swift 5.0+](https://img.shields.io/badge/Swift-5.0%2B-orange.svg)
 ![SwiftUI 3.0+](https://img.shields.io/badge/SwiftUI-3.0%2B-orange.svg)
 
-## [中文说明](https://github.com/jackiehu/${POD_NAME}/blob/main/README_ZH.md)
+## [中文说明](https://github.com/zjinhu/${POD_NAME}/blob/main/README_ZH.md)
 
 ## Example
 
@@ -32,7 +32,7 @@ Starting from Xcode 11, the Swift Package Manager is integrated, which is very c
 
 Select `File > Swift Packages > Add Pacakage Dependency` in Xcode's menu bar, and enter in the search bar
 
-`https://github.com/jackiehu/${POD_NAME}`, you can complete the integration
+`https://github.com/zjinhu/${POD_NAME}`, you can complete the integration
 
 ### Manual Install
 
